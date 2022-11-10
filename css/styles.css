@@ -141,7 +141,8 @@ header {
 
 } */
 
-.adress-header:hover {
+.adress-header:hover,
+.adress-header:focus {
   color: rgba(33, 150, 243, 1);
 }
 
@@ -174,6 +175,8 @@ header {
 .portfolio-btn:focus {
   color: white;
   background-color: rgba(33, 150, 243, 1);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .overlay {
@@ -322,12 +325,24 @@ img {
 
 .product-item {
   flex-basis: calc((100% - 2 * 30px) / 3);
+  background: #ffffff;
+}
+
+.product-item:hover,
+.product-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .item {
   display: flex;
   gap: 10px;
   color: #757575;
+}
+
+.item:hover,
+.item:focus {
+  color: #2196f3;
 }
 
 .products-group {
@@ -432,7 +447,8 @@ img {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.information:hover {
+.information:hover,
+.information:focus {
   color: rgba(33, 150, 243, 1);
 }
 
@@ -468,10 +484,11 @@ img {
 }
 
 .contact-icon {
-  stroke: #757575;
+  fill: #757575;
 }
 
-.contact-icon:hover {
+.contact-icon:hover,
+.contact-icon:focus {
   stroke: #2196f3;
 }
 
@@ -480,7 +497,15 @@ img {
   margin-top: 25px;
 }
 .team-details-icon {
+  fill: #afb1b8;
+  stroke: #afb1b8;
   margin-top: 16px;
+}
+
+.team-details-icon:hover,
+.team-details-icon:focus {
+  fill: #ffffff;
+  stroke: #ffffff;
 }
 
 .circle-icon {
@@ -493,7 +518,8 @@ img {
   object-fit: contain;
 }
 
-.circle-icon:hover {
+.circle-icon:hover,
+.circle-icon:focus {
   background-color: #2196f3;
   border-radius: 50%;
   stroke: #ffffff;
@@ -529,7 +555,8 @@ img {
   border-radius: 4px;
 }
 
-.client-icons:hover {
+.client-icons:hover,
+.client-icons:focus {
   border-color: #2196f3;
 }
 
@@ -539,10 +566,22 @@ img {
   margin-top: 50px;
 }
 
-.client-details-icon {
+.client-main-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
 }
 
-.client-details-icon:hover {
+.client-details-icon {
+  fill: #afb1b8;
+}
+
+.client-details-icon:hover,
+.client-details-icon:focus {
   stroke: #2196f3;
   fill: #2196f3;
 }
@@ -571,41 +610,43 @@ img {
   height: 80px;
 }
 
-.team-details-icon {
-  fill: #ffffff;
-}
-
 .social-links-icon {
-  display: inline-block;
   height: 44px;
   width: 44px;
   background-size: 20px;
-
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   padding: 0;
+  margin: 0 auto;
+}
+
+.items-social-links-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-links-icon:not(:last-child) {
   margin-right: 10px;
 }
 
-.social-links-icon:nth-child(2) {
+.social-links-icon:nth-child(1) {
   background-image: url(../images/instagram.png);
 }
-.social-links-icon:nth-child(3) {
+.social-links-icon:nth-child(2) {
   background-image: url(../images/twitter.png);
 }
-.social-links-icon:nth-child(4) {
+.social-links-icon:nth-child(3) {
   background-image: url(../images/facebook.png);
 }
-.social-links-icon:nth-child(5) {
+.social-links-icon:nth-child(4) {
   background-image: url(../images/linkedin.png);
 }
 
-.social-links-icon:hover {
+.social-links-icon:hover,
+.social-links-icon:focus {
   background-color: #2196f3;
   border-radius: 50%;
   cursor: pointer;
