@@ -131,16 +131,6 @@ header {
   letter-spacing: 0.02em;
 }
 
-/* .adress-header::before{
-  display: inline-block;
-  
-  content:"";
-  width: 16px;
-  height: 12px;
-  background-color: red;
-
-} */
-
 .adress-header:hover,
 .adress-header:focus {
   color: rgba(33, 150, 243, 1);
@@ -335,8 +325,6 @@ img {
 }
 
 .item {
-  display: flex;
-  gap: 10px;
   color: #757575;
 }
 
@@ -400,6 +388,7 @@ img {
   color: var(--secondary-text-color);
   text-align: center;
   margin: 0;
+  margin-bottom: 16px;
 }
 
 .cards {
@@ -484,7 +473,8 @@ img {
 }
 
 .contact-icon {
-  fill: #757575;
+  fill: currentColor;
+  margin-right: 10px;
 }
 
 .contact-icon:hover,
@@ -499,7 +489,6 @@ img {
 .team-details-icon {
   fill: #afb1b8;
   stroke: #afb1b8;
-  margin-top: 16px;
 }
 
 .team-details-icon:hover,
@@ -508,18 +497,17 @@ img {
   stroke: #ffffff;
 }
 
-.circle-icon {
-  display: inline-block;
+.circle-icon-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   width: 44px;
   height: 44px;
-  padding-left: 12px;
-  padding-right: 12px;
-  object-position: center;
-  object-fit: contain;
 }
 
-.circle-icon:hover,
-.circle-icon:focus {
+.circle-icon-item:hover,
+.circle-icon-item:focus {
   background-color: #2196f3;
   border-radius: 50%;
   stroke: #ffffff;
@@ -560,6 +548,17 @@ img {
   border-color: #2196f3;
 }
 
+.client-icons:hover .client-details-icon,
+.client-icons:focus .client-details-icon {
+  fill: #2196f3;
+}
+
+.client-details-icon:hover,
+.client-details-icon:focus {
+  stroke: #2196f3;
+  fill: #2196f3;
+}
+
 .clients {
   display: flex;
   justify-content: center;
@@ -580,12 +579,6 @@ img {
   fill: #afb1b8;
 }
 
-.client-details-icon:hover,
-.client-details-icon:focus {
-  stroke: #2196f3;
-  fill: #2196f3;
-}
-
 .cards-icons {
   display: flex;
   justify-content: center;
@@ -593,6 +586,7 @@ img {
 }
 
 .social-links-title {
+  text-align: left;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
@@ -655,4 +649,9 @@ img {
 .footer-icons {
   display: flex;
   gap: 70px;
+  align-items: baseline;
+}
+
+.client-items:hover {
+  color: red;
 }
